@@ -7,5 +7,7 @@
         public string Model { get; set; }
         public string EngNumber { get; set; }
         public string ChassisNumber { get; set; }
+        
+        public Plaque Plaque { get; set; }
     }
 }

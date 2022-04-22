@@ -5,8 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="5.2.0" />
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <Folder Include="Cars\Exceptions\" />
+    <Folder Include="Plaques\" />
+    <Folder Include="Users\" />
   </ItemGroup>
 
 </Project>
