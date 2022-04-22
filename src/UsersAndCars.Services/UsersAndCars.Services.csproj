@@ -6,8 +6,8 @@
 
   <ItemGroup>
     <Folder Include="Cars\Exceptions\" />
-    <Folder Include="Plaques\" />
-    <Folder Include="Users\" />
+    <Folder Include="Plaques\Exceptions\" />
+    <Folder Include="Users\Exceptions\" />
   </ItemGroup>
 
 </Project>
