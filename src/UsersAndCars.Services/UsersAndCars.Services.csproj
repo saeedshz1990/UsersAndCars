@@ -10,4 +10,8 @@
     <Folder Include="Users\Exceptions\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UsersAndCars.Entities\UsersAndCars.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

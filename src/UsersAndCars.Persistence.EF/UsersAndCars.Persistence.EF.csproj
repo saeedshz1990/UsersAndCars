@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\UsersAndCars.Entities\UsersAndCars.Entities.csproj" />
     <ProjectReference Include="..\UsersAndCars.Infrastructure\UsersAndCars.Infrastructure.csproj" />
+    <ProjectReference Include="..\UsersAndCars.Services\UsersAndCars.Services.csproj" />
   </ItemGroup>
 
 </Project>
