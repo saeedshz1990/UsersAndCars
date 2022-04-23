@@ -29,7 +29,7 @@ namespace UsersAndCars.Persistence.EF.Plaques
                 }).ToList();
         }
 
-        public GetPlaqueDto GetCarById(int id)
+        public GetPlaqueDto GetPlaqueById(int id)
         {
             return _plaques.Select(_ => new GetPlaqueDto
             {

@@ -11,6 +11,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using UsersAndCars.Entities;
+using UsersAndCars.Infrastructure.Application;
+using UsersAndCars.Persistence.EF;
+using UsersAndCars.Persistence.EF.Cars;
+using UsersAndCars.Persistence.EF.Plaques;
+using UsersAndCars.Persistence.EF.Users;
+using UsersAndCars.Services.Cars;
+using UsersAndCars.Services.Cars.Contracts;
+using UsersAndCars.Services.Plaques;
+using UsersAndCars.Services.Plaques.Contracts;
+using UsersAndCars.Services.Users;
+using UsersAndCars.Services.Users.Contracts;
 
 namespace UsersAndCars.RestAPI
 {
@@ -28,6 +41,22 @@ namespace UsersAndCars.RestAPI
         {
 
             services.AddControllers();
+
+            services.AddDbContext<UsersAndCarsDbContext>
+                (_ => _.UseSqlServer(Configuration["ConnectionString"]));
+
+            services.AddScoped<UnitOfWork, EFUnitOfWork>();
+
+            services.AddScoped<UserRepository, EFUserRepository>();
+            services.AddScoped<UserService, UserAppService>();
+
+            services.AddScoped<CarRepository, EFCarRepository>();
+            services.AddScoped<CarService, CarAppService>();
+
+            services.AddScoped<PlaqueRepository, EFPlaqueRepository>();
+            services.AddScoped<PlaqueService, PlaqueAppService>();
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UsersAndCars.RestAPI", Version = "v1" });

@@ -9,7 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\UsersAndCars.Persistence.EF\UsersAndCars.Persistence.EF.csproj" />
+    <ProjectReference Include="..\UsersAndCars.Services\UsersAndCars.Services.csproj" />
   </ItemGroup>
 
 </Project>

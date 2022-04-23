@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using UsersAndCars.Entities;
 using UsersAndCars.Services.Users.Contracts;
@@ -26,7 +25,7 @@ namespace UsersAndCars.Persistence.EF.Users
             }).ToList();
         }
 
-        public GetUserDto GetCarById(int id)
+        public GetUserDto GetUserById(int id)
         {
             return _users
                 .Select(_ => new GetUserDto
@@ -55,6 +54,12 @@ namespace UsersAndCars.Persistence.EF.Users
                 .FirstOrDefault(_ => _.Id == id);
 
             _users.Remove(user);
+        }
+
+        public bool IsNationalCodeExist(string nationalCode)
+        {
+            return _users
+                .Any(_ => _.NationalCode == nationalCode);
         }
     }
 }

@@ -5,13 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Cars\Exceptions\" />
-    <Folder Include="Plaques\Exceptions\" />
-    <Folder Include="Users\Exceptions\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\UsersAndCars.Entities\UsersAndCars.Entities.csproj" />
+    <ProjectReference Include="..\UsersAndCars.Infrastructure\UsersAndCars.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

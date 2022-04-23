@@ -7,7 +7,7 @@ namespace UsersAndCars.Services.Plaques.Contracts
     public interface PlaqueRepository
     {
         List<GetPlaqueDto> GetAll();
-        GetPlaqueDto GetCarById(int id);
+        GetPlaqueDto GetPlaqueById(int id);
         void Create(Plaque plaque);
         void Update(int id, Plaque dto);
         void Delete(int id);

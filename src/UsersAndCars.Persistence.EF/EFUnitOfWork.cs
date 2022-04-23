@@ -4,9 +4,16 @@ namespace UsersAndCars.Persistence.EF
 {
     public class EFUnitOfWork : UnitOfWork
     {
+        private readonly UsersAndCarsDbContext _context;
+
+        public EFUnitOfWork(UsersAndCarsDbContext context)
+        {
+            _context = context;
+        }
+
         public void Commit()
         {
-            throw new System.NotImplementedException();
+            _context.SaveChanges();
         }
     }
 }
